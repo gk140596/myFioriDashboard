@@ -8,8 +8,7 @@ sap.ui.define([
 	return Controller.extend("dashdashboard.controller.Header", {
 
 		onInit: function() {
-                  //http://192.168.1.159:8000/sap/opu/odata/sap/ZSD_DASHBOARD1_SRV/ZAPPROVALSet(APPLEVEL='LEVEL1',CUSTOMER='',SPERSON='00000009')/SO_HeaderSet
-		},
+                 	},
 		onNavBack: function() {
 			//window.history.go(-1);
 			var oHistory = History.getInstance();
