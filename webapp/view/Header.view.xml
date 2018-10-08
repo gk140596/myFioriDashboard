@@ -1,0 +1,28 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="dashdashboard.controller.Header"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="header" title="Header Data" showNavButton="true" navButtonPress="onNavBack">
+		<Panel width="100%" expandable="true" expanded="true" expandAnimation="true">
+			<Table id="idProductsTable" mode="SingleSelectMaster" selectionChange="onSelectionChange" inset="false"
+				items="{ path: 'headerData>/d/results', sorter: { path: 'text' } }">
+				<columns>
+					<Column id="salesOrder" width="12em">
+						<Text text="Sales Order"/>
+					</Column>
+					<Column id="customerNumber" minScreenWidth="Tablet">
+						<Text text="Customer Number"/>
+					</Column>
+				</columns>
+				<ColumnListItem>
+					<cells>
+						<Text text="{headerData>vbeln}"/>
+						<Text text="{headerData>kunnr}"/>
+					</cells>
+				</ColumnListItem>
+			</Table>
+			<Button id="button" press="onClickButton" text="Next"></Button>
+		</Panel>
+			<footer >
+			<OverflowToolbar id="Footer2" class="sapUiSmallMarginBottom"></OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

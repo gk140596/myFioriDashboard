@@ -1,0 +1,95 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="otsi.erp.view.Details2"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+		<Page id="Details2Page" title="{i18n>appTitle}" showNavButton="true" navButtonPress="onNavBack">
+			<content>
+				<!--Navigation Table -->
+				<Table id="navigationTable1" growing="true" modeAnimationOn="false" growingScrollToLoad="true">
+					<headerToolbar id="navigationTable_headerToolbar">
+						<Toolbar id="navigationTable_headerToolbar_toolbar">
+							<Label id="navigationTable_headerToolbar_toolbar_title" text="{i18n>detail2PageTitle}" class="sapMH4FontSize"/>
+						</Toolbar>
+					</headerToolbar>
+					<columns id="navigationTable_columns">
+						<Column id="navigationTable_columns_col1" width="33%" minScreenWidth="Tablet"  demandPopin="true" hAlign="Left" vAlign="Top">
+							<header id="navigationTable_columns_col1_header">
+								<Label id="navigationTable_columns_col1_header_label" text="{i18n>salesOrder}" design="Bold"/>
+							</header>
+						</Column>
+						<Column id="navigationTable_columns_col2" width="33%" minScreenWidth="Tablet" demandPopin="true" hAlign="Left" vAlign="Top">
+							<header id="navigationTable_columns_col2_header">
+								<Label id="navigationTable_columns_col2_header_label" text="{i18n>item}" design="Bold"/>
+							</header>
+						</Column>
+						<Column id="navigationTable_columns_col3" width="33%" minScreenWidth="Tablet" demandPopin="true" hAlign="Left" vAlign="Top">
+							<header id="navigationTable_columns_col3_header">
+								<Label id="navigationTable_columns_col3_header_label" text="{i18n>material}" design="Bold"/>
+							</header>
+						</Column>
+						<Column id="navigationTable_columns_4" width="33%" minScreenWidth="Tablet" demandPopin="true" hAlign="Left" vAlign="Top">
+							<header id="navigationTable_columns_col4_header">
+								<Label id="navigationTable_columns_4_header_label" text="{i18n>ordQty}" design="Bold"/>
+							</header>
+						</Column>
+						<Column id="navigationTable_columns_5" width="33%" minScreenWidth="Tablet" demandPopin="true" hAlign="Left" vAlign="Top">
+							<header id="navigationTable_columns_col5_header">
+								<Label id="navigationTable_columns_5_header_label" text="{i18n>cnfQty}" design="Bold"/>
+							</header>
+						</Column>
+						<Column id="navigationTable_col6" width="33%" minScreenWidth="Tablet" demandPopin="true" hAlign="Left" vAlign="Top">
+							<header id="navigationTable_columns_col6_header">
+								<Label id="navigationTable_col6_header_label" text="{i18n>rtTON}" design="Bold"/>
+							</header>
+						</Column>
+						<Column id="navigationTable_col7" width="33%" minScreenWidth="Tablet" demandPopin="true" hAlign="Left" vAlign="Top">
+							<header id="navigationTable_columns_col7_header">
+								<Label id="navigation_columns_col7_header_label" text="{i18n>qtyPC}" design="Bold"/>
+							</header>
+						</Column>
+						<Column id="navigation_columns_col8" width="33%" minScreenWidth="Tablet" demandPopin="true" hAlign="Left" vAlign="Top">
+							<header id="navigationTable_columns_col8_header">
+								<Label id="navigation_col8_header_label" text="{i18n>atPC}" design="Bold"/>
+							</header>
+						</Column>
+						<Column id="navigation_col9" width="33%" minScreenWidth="Tablet" demandPopin="true" hAlign="Left" vAlign="Top">
+							<header id="navigationTable_col9_header">
+								<Label id="navigation_columns_col9_header_label" text="{i18n>qtyMT}" design="Bold"/>
+							</header>
+						</Column>
+						<Column id="navigationTable_columns10" width="33%" minScreenWidth="Tablet" demandPopin="true" hAlign="Left" vAlign="Top">
+							<header id="navigationTable_columns_col10_header">
+								<Label id="navigationTable_columns10_header_label" text="{i18n>ntwgt}" design="Bold"/>
+							</header>
+						</Column>
+						<Column id="navigationTable_columns11" width="33%" minScreenWidth="Tablet" demandPopin="true" hAlign="Left" vAlign="Top">
+							<header id="navigationTable_columns_col11_header">
+								<Label id="navigationTable_columns11_header_label" text="{i18n>rtPC}" design="Bold"/>
+							</header>
+						</Column>
+					</columns>
+					<ColumnListItem id="navigationListItem1" type="Navigation" press="onLineItemPressed" class="navTableItemLayout">
+						<cells id="navigationListItem_cells">
+							<Text id="navigationListItem_cells_cell_1" text="{vbeln}"/>
+							<Text id="navigationListItem_cells_cell_2" text="{posnr}"/>
+							<Text id="navigationListItem_cells_cell_3" text="{matnr}"/>
+							<Text id="navigationListItem_cells_cell_4" text="{wmeng}"/>
+							<Text id="navigationListItem_cells_cell_5" text="{bmeng}"/>
+							<Text id="navigationListItem_cells_cell_6" text="{zzperton_amt}"/>
+							<Text id="navigationListItem_cells_cell_7" text="{zztotpc_qty}"/>
+							<Text id="navigationListItem_cells_cell_8" text="{zzperpc_amt}"/>
+							<Text id="navigationListItem_cells_cell_9" text="{zztotton_qty}"/>
+							<Text id="navigationListItem_cells_cell_10" text="{ntgew}"/>
+							<Text id="navigationListItem_cells_cell_11" text="{zzperpc_amt}"/>
+						</cells>
+					</ColumnListItem>
+				</Table>
+			</content>
+			<footer id="Footer3" class="sapUiTinyMarginBottom">
+				<Bar>
+					<contentRight>
+						<Button id="approve" text="{i18n>approve}" type="Accept" press="onApprove"/>
+						<Button id="reject" text="{i18n>reject}" type="Reject" press="onReject"/>
+					</contentRight>
+				</Bar>
+			</footer>
+		</Page>
+</mvc:View>
